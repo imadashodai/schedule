@@ -1,0 +1,12 @@
+<h1>
+イベント作成
+</h1>
+<%= form_for(@event) do |f| %>
+	イベント名
+	<%= f.text_field :event_name %>
+
+	イベント日時
+	<%= f.datetime_select :event_at %>
+
+	<%= f.submit "作成", class: "btn btn-large btn-primary" %>	
+<% end %>

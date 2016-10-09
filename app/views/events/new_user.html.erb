@@ -1,0 +1,8 @@
+<%= @event['event_name'] %>
+
+<%= form_for(@user, :url => {:controller => :events, :action => :create_user}) do |f| %>
+        <%= f.text_field :name %>
+        <%= f.text_area :comment %>
+        <%= f.select :status_id, User.status_id.options %>
+        <%= f.submit %>
+<% end %>

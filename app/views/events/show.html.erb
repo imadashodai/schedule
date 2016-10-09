@@ -1,0 +1,14 @@
+<h1><%= @event.event_name %></h1>
+<%= @event.event_at %><br>
+<%= event_token_url(@token.token) %><br>
+<div>
+	<% @event_user.each do |user| %>
+		名前:
+		<%= user.name %>
+		ステータス:
+		<%= user.status_id %>
+		コメント:
+		<%= user.comment %>
+		<br>
+	<% end %>
+</div>
